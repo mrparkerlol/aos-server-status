@@ -1,6 +1,6 @@
 Ace Of Spades                        By: DirectX3DNerd
   Server Status                      Version: V1.0
-         in PHP                      Homepage: bit.ly/AoSSTAT
+         in PHP                      Homepage: http://bit.ly/AoSStatusScript
 
 This code can be used for production use. This code can 
 be distributed ONLY with this README file. 
