@@ -25,7 +25,7 @@ Made a config file to make customization easier.
 Cleaned up the code.
 
 This is not the final update, there will be more as needed.
-Have suggestions? Tweet me! @DirectX3DNerd
+Have suggestions? Tweet me! @MrJacobParker
 
 V1.9
 Updated the master server, tutorial updated.
