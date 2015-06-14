@@ -1,24 +1,33 @@
 <?php
+// Include the configuration
 include 'config.php';
 
+// Retrieve the resource
 $resource_content = file_get_contents($resource);
 
+// Decode the JSON
+$a = json_decode(file_get_contents($resource), true);
+$n = count($a);
+
+// Is the server in the resource?
 if (strpos($resource_content, $server_ip) == false) {
 ?>
+	<!-- The server appears to not be in the list -->
 	<div style="color: <?php echo $offline_color; ?>;"><?php echo $offline_message; ?></div>
 <?php
 } else {
 ?>
+	<!-- The server is in the list -->
 	<div style="color: <?php echo $online_color; ?>;"><?php echo $online_message; ?></div>
 <?php
 }
 
-$a = json_decode(file_get_contents($resource), true);
 
-$n = count($a);
 
+// Loop through the result
 for($i=0; $i < $n; $i++)
 {
+	// Is the server ip found?
     if($a[$i]['identifier'] == $server_ip)
     {
 		// Variables to store information
@@ -30,6 +39,7 @@ for($i=0; $i < $n; $i++)
 		$server_country =  $a[$i]['country'];
 		
 		?>
+		<!-- Output the information -->
 <table>
 	<tr>
 		<td><b>Server: <?php echo $server_name; ?></b></td>
@@ -54,7 +64,8 @@ for($i=0; $i < $n; $i++)
     </tr>
  </table>
         <?php
+        // Prevent the looping of the output
         exit();
     }
 }
-?>
+?>	
