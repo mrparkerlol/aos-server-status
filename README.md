@@ -3,16 +3,17 @@
      in PHP                          Homepage: http://bit.ly/AoSStatusScript
 
 This code can be used for production use. This code can 
-be distributed ONLY with this README file. 
-
+be distributed ONLY with this README file.
 
 Info:
 This script can be used in an API if needed, you do not need to use the default template.
 This update now supports 0.76, and 0.75.
 
-I updated the HTML in the tutorial as requested to fix deprecated tags.
-
 Change Log:
+
+V2.1
+Repositioned parts of the code
+Added comments to code for easier modification
 
 V2.0
 Updated master server.
@@ -23,7 +24,7 @@ Made a config file to make customization easier.
 Cleaned up the code.
 
 This is not the final update, there will be more as needed.
-Have suggestions? Tweet me! http://www.twitter.com/Djmann1013
+Have suggestions? Tweet me! @Djmann1013
 
 V1.9
 Updated the master server, tutorial updated.
