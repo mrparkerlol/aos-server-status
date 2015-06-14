@@ -23,7 +23,7 @@ Made a config file to make customization easier.
 Cleaned up the code.
 
 This is not the final update, there will be more as needed.
-Have suggestions? Tweet me! @Djmann1013
+Have suggestions? Tweet me! http://www.twitter.com/Djmann1013
 
 V1.9
 Updated the master server, tutorial updated.
