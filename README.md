@@ -1,8 +1,6 @@
-Ace Of Spades                        By: DirectX3DNerd
-  Server Status                      Version: V1.0
-         in PHP                      Homepage: http://bit.ly/AoSStatusScript
-
-Demo: https://aos_status_script-c9-directx3dnerd.c9.io/
+     Ace Of Spades                   By: DirectX3DNerd
+     Server Status                   Version: V2.0
+     in PHP                          Homepage: http://bit.ly/AoSStatusScript
 
 This code can be used for production use. This code can 
 be distributed ONLY with this README file. 
@@ -16,7 +14,7 @@ I updated the HTML in the tutorial as requested to fix deprecated tags.
 
 Change Log:
 
-V1.0
+V2.0
 Updated master server.
 now supports 0.76 servers automatically.
 Removed deprecated HTML tags (<center>).
@@ -25,7 +23,7 @@ Made a config file to make customization easier.
 Cleaned up the code.
 
 This is not the final update, there will be more as needed.
-Have suggestions? Tweet me! @MrJacobParker
+Have suggestions? Tweet me! @Djmann1013
 
 V1.9
 Updated the master server, tutorial updated.
