@@ -1,6 +1,6 @@
-     Ace Of Spades                   By: DirectX3DNerd
-     Server Status                   Version: V2.0
-     in PHP                          Homepage: http://bit.ly/AoSStatusScript
+     Ace Of Spades                   By: ThrownException/AVeryNerdyDude
+     Server Status                   Version: V2.2
+     in PHP                          
 
 This code can be used for production use. This code can 
 be distributed ONLY with this README file.
@@ -10,6 +10,11 @@ This script can be used in an API if needed, you do not need to use the default 
 This update now supports 0.76, and 0.75.
 
 Change Log:
+
+V2.2
+Added support for server version (automatic)
+Fixed tabbing in code
+Support for PHP 7!
 
 V2.1
 Repositioned parts of the code
@@ -24,7 +29,7 @@ Made a config file to make customization easier.
 Cleaned up the code.
 
 This is not the final update, there will be more as needed.
-Have suggestions? Tweet me! http://www.twitter.com/Djmann1013
+Have suggestions? Tweet me! http://www.twitter.com/AVeryNerdyDude
 
 V1.9
 Updated the master server, tutorial updated.
@@ -51,10 +56,8 @@ Code really neat and speedy now. Fixed some minor bugs.
 v1.2
 Bug fixed with the server URL. When you click the link, it now goes to your server.
 
-
 v1.1
 Bug fixes
-
 
 v1.0 
 Release.
