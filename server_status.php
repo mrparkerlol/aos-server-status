@@ -22,8 +22,6 @@ if (strpos($resource_content, $server_ip) == false) {
 <?php
 }
 
-
-
 // Loop through the result
 for($i=0; $i < $n; $i++)
 {
@@ -37,35 +35,35 @@ for($i=0; $i < $n; $i++)
 		$server_latency = $a[$i]['latency'];
 		$server_gamemode = $a[$i]['game_mode'];
 		$server_country =  $a[$i]['country'];
-		
-		?>
-		<!-- Output the information -->
+		$server_version = $a[$i]['game_version'];
+	?>
+	<!-- Output the information -->
 <table>
 	<tr>
 		<td><b>Server: <?php echo $server_name; ?></b></td>
-    </tr>
+  </tr>
 	<tr>
 		<td><b>Players: <?php echo $server_players; ?></b></td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
 		<td><b>Map: <?php echo $server_map; ?></b></td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
 		<td><b>Ping: <?php echo $server_latency; ?></b></td>
-    </tr>
-    <tr>
-    	<td><b>Mode: <?php echo $server_gamemode; ?></b></td>
-    </tr>
+  </tr>
+  <tr>
+    <td><b>Mode: <?php echo $server_gamemode; ?></b></td>
+  </tr>
 	<tr>
-    	<td><b>Country: <?php echo $server_country; ?></b></td>
-    </tr>
+    <td><b>Country: <?php echo $server_country; ?></b></td>
+  </tr>
 	<tr>
-		<td><a href='<?php echo $server_ip; ?>'><?php echo $join_message; ?></a></td>
-    </tr>
+		<td><a href='<?php echo $server_ip . ":" . $server_version; ?>'><?php echo $join_message; ?></a></td>
+  </tr>
  </table>
-        <?php
-        // Prevent the looping of the output
-        exit();
-    }
+<?php
+	  // Prevent the looping of the output
+	  exit();
+	}
 }
-?>	
+?>
