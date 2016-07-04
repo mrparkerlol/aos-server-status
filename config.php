@@ -20,6 +20,6 @@ $offline_message = "Server Offline!";
 $online_message = "Server Online!";
 
 // Custom "Join Server" message
-$join_message = "<img src='http://i.imgur.com/3GinYaH.png' />";
+$join_message = "<img src='//i.imgur.com/3GinYaH.png' />";
 
 ?>
