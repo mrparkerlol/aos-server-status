@@ -2,7 +2,7 @@
 // Config file
 
 // Server's IP
-$server_ip = "aos://286585762:32887";
+$server_ip = "aos://180274501:43887";
 
 // Master Server
 $resource = "http://services.buildandshoot.com/serverlist.json";

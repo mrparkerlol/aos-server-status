@@ -63,7 +63,7 @@ for($i=0; $i < $n; $i++)
  </table>
 <?php
 	  // Prevent the looping of the output
-	  exit();
+	  break;
 	}
 }
 ?>
