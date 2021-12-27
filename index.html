@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AoS Server Status Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="/assets/server_status.js"></script>
+
+        <style>
+            .noselect {
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .online {
+                color: lightgreen;
+            }
+
+            .offline {
+                color: red;
+            }
+
+            html {
+                background-color: darkgray;
+            }
+
+            #nav {
+                text-align:center;
+                color: lightgray;
+            }
+
+            #nav a {
+                color: white;
+            }
+
+            #server_info {
+                text-align: center;
+            }
+
+            #server_info b {
+                display: block;
+            }
+
+            #join-button {
+                cursor: pointer;
+            }
+
+            #status-banner {
+                text-align: center;
+            }
+
+            #footer {
+                color: lightgray;
+                text-align: center;
+            }
+
+            #footer a {
+                color: white;
+            }
+
+            #header {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <h2 id="header" class="noselect">AoS Server Status</h2>
+            <a href="/documentation">Docs</a>&nbsp;&nbsp;<a href="https://github.com/mrparkerlol/aos-server-status" target="_blank">Github</a>
+        </div>
+
+        <div id="content">
+            <h2 id="status-banner" class="noselect">Server Status</h2>
+            <div id="server_info" class="noselect">
+                <b>Server: <span id="server-name"></span></b>
+                <b>Players: <span id="server_players_current"></span>/<span id="server_players_max"></span></b>
+                <b>Map: <span id="server_map"></span></b>
+                <b>Ping: <span id="server_ping"></span></b>
+                <b>Mode: <span id="server_mode"></span></b>
+                <b>Country: <span id="server_country"></span></b>
+                <p id="join-link"><img src="" id="join-button" /></p>
+            </div>
+        </div>
+
+        <div id="footer" class="noselect">
+            <p>Made by <a href="https://github.com/mrparkerlol">Jacob</a>, project source is <a href="https://github.com/mrparkerlol/aos-server-status">here</a></p>
+        </div>
+
+        <script>
+            (async ()=>{
+                document.getElementById("header").addEventListener("click", () => {
+                    window.location.href = "/"
+                })
+
+                let data = await aos_server_status("aos://2791176354:43887:0.75")
+                if (data) {
+                    document.getElementById("server-name").innerText = data.name
+                    document.getElementById("server_players_current").innerText = data.players_current
+                    document.getElementById("server_players_max").innerText = data.players_max
+                    document.getElementById("server_map").innerText = data.map
+                    document.getElementById("server_ping").innerText = data.latency
+                    document.getElementById("server_mode").innerText = data.game_mode
+                    document.getElementById("server_country").innerText = data.country
+                    document.getElementById("join-link").addEventListener("click", () => {
+                        window.location.href = `${data.identifier}:${data.game_version}`
+                    })
+                    document.getElementById("join-button").setAttribute("src", "//i.imgur.com/3GinYaH.png")
+                } else {
+                    document.getElementById("server_info").innerHTML = `<p class="offline">Server is offline!</span>`
+                }
+            })()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Docs - AoS Server Status</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+        <style>
+            .noselect {
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .online {
+                color: lightgreen;
+            }
+
+            .offline {
+                color: red;
+            }
+
+            html {
+                background-color: darkgray;
+            }
+
+            #nav {
+                text-align:center;
+                color: lightgray;
+            }
+
+            #nav a {
+                color: white;
+            }
+
+            #server_info {
+                text-align: center;
+            }
+
+            #server_info b {
+                display: block;
+            }
+
+            #join-button {
+                cursor: pointer;
+            }
+
+            #status-banner {
+                text-align: center;
+            }
+
+            #footer {
+                color: lightgray;
+                text-align: center;
+            }
+
+            #footer a {
+                color: white;
+            }
+
+            #header {
+                cursor: pointer;
+            }
+
+            #doc-text {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <h2 id="header" class="noselect">AoS Server Status</h2>
+            <a href="/documentation">Docs</a>&nbsp;&nbsp;<a href="https://github.com/mrparkerlol/aos-server-status" target="_blank">Github</a>
+        </div>
+
+        <div id="content">
+            <h2 id="status-banner" class="noselect">Documentation</h2>
+            <div id="docs">
+                <h3 id="status-banner" class="noselect">Get server status</h3>
+                <p id="doc-text">
+                    The function to get the server info is <b>aos_server_status</b> and the value is<br>
+                    a string of the server identifier, which is used by the AoS client to connect.<br>
+                    It can contain the version info, however it doesn't use it as part of checking the status.<br>
+                    It uses the BuildandShoot servers by default, but it can be configured with any status server if you want<br>
+                    by using the second parameter to specify the URL with your own data, if needed.<br><br>
+
+                    The function can return undefined if the server is offline or not found, so handle accordingly.<br>
+                    The code below just shows how to use the function visually, how to implement it in your<br>
+                    own page is entirely up to you since every case is unique.
+                </p>
+                <pre class="prettyprint">
+                    // Below example uses BuildandShoot's server list - which is what the script uses by default
+                    let data = await aos_server_status("aos://2791176354:43887:0.75") // returns the server's data
+
+                    if (data) {
+                        // Below is all the important data points, but is not all provided
+                        // by the BuildandShoot API.
+                        let server_name = data.name
+                        let server_players_current = data.players_current
+                        let server_players_max = data.players_max
+                        let server_map = data.map
+                        let server_ping = data.latency
+                        let server_mode = data.game_mode
+                        let server_country = data.country
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="footer" class="noselect">
+            <p>Made by <a href="https://github.com/mrparkerlol">Jacob</a>, project source is <a href="https://github.com/mrparkerlol/aos-server-status">here</a></p>
+        </div>
+
+        <script>
+            document.getElementById("header").addEventListener("click", () => {
+                window.location.href = "/"
+            })
+        </script>
+    </body>
+</html>
