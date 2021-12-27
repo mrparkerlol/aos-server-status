@@ -4,3 +4,5 @@ This project contains a script which allows you to obtain the status of any serv
 be used with your own status APIs if necessary.
 
 A demo can be viewed here: https://aos-status.mrparker.dev, and the script can be located here (download locally and use a CDN or your server to serve): https://github.com/mrparkerlol/aos-server-status/blob/main/server_status.js
+
+The old PHP code can be found here: https://github.com/mrparkerlol/aos-server-status/tree/old
