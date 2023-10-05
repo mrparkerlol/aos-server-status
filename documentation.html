@@ -94,6 +94,9 @@
                     // Below example uses BuildandShoot's server list - which is what the script uses by default
                     let data = await aos_server_status("aos://2791176354:43887:0.75") // returns the server's data
 
+                    // below is an example on how to use a custom list
+                    // let data = await aos_server_status("aos://2791176354:43887:0.75", "https://list.example.com")
+
                     if (data) {
                         // Below is all the important data points, but is not all provided
                         // by the BuildandShoot API.
