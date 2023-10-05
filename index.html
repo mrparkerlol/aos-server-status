@@ -93,7 +93,7 @@
                     window.location.href = "/"
                 })
 
-                let data = await aos_server_status("aos://2791176354:43887:0.75")
+                let data = await aos_server_status("aos://1124169524:34887:0.75") // aos://2791176354:43887:0.75
                 if (data) {
                     document.getElementById("server_name").innerText = data.name
                     document.getElementById("server_players_current").innerText = data.players_current
